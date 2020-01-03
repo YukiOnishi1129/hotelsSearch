@@ -9,8 +9,7 @@ body {
 }
 @import 'foundation/reset';
 @import 'layout/App';
-@import 'SearchForm';
-@import 'GeocodeResult';
-@import 'Map';
-@import 'HotelsTable';
-@import 'HotelsClickableTh';
+@import 'object/SearchForm';
+@import 'object/GeocodeResult';
+@import 'object/HotelsTable';
+@import 'object/HotelsClickableTh';

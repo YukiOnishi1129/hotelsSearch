@@ -34,21 +34,6 @@ SearchForm.proptypes = {
     history: PropTypes.shape({ push: PropTypes.func }).isRequired,
 };
 
-// stateをもらって、コンポーネントに必要なpropsに変換する
-// const mapStateProps = state => ({
-//     place: state.place,
-// });
-// dispatchをもらって、コンポーネントに必要なpropsに変換する
-// const mapDispatchToProps = dispatch => ({
-//     onPlaceChange: place => dispatch(setPlace(place)),
-//     onSubmit: (place) => {
-        
-//     }
-// });
-
-// connect
-// SearchPageコンポーネントとStoreを紐づけた状態で返す
-
 export default connect(
     state => ({
         place: state.place,
