@@ -10,7 +10,7 @@
 .main {
     width: 80%;
     margin: $base-margin auto 0;
-    @include sm {
+    @include tm {
         width: 95%;
     }
     
