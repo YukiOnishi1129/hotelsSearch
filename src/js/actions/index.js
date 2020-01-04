@@ -10,7 +10,10 @@ export const setHotels = hotels => dispatch => dispatch({ type: 'CHANGE_HOTELS',
 export const setSortKey = sortKey => dispatch => dispatch({ type: 'CHANGE_SORT_KEY', sortKey});
 
 export const startSearch = () => (dispatch, getState) => {
-    geocode(getState().place)
+    if (getState().place == "") {
+        dispatch(setErrorMessage('未入力です。'));
+    } else {
+        geocode(getState().place)
             .then(({status, address, location}) => {
                 switch (status) {
                     case 'OK': {
@@ -18,7 +21,11 @@ export const startSearch = () => (dispatch, getState) => {
                         return searchHotelByLocation(location);
                     }
                     case 'REQUEST_DENIED': {
-                        dispatch(setErrorMessage('結果が見つかりません'));
+                        dispatch(setErrorMessage('結果が見つかりません。正しい所在地を入力してください。'));
+                        break;
+                    }
+                    case 'ZERO_RESULTS': {
+                        dispatch(setErrorMessage('結果が見つかりません。正しい所在地を入力してください。'));
                         break;
                     }
                     default : {
@@ -33,4 +40,6 @@ export const startSearch = () => (dispatch, getState) => {
             .catch(() => {
                 dispatch(setErrorMessage('通信に失敗しました'));
             });
+    }
+    
 }

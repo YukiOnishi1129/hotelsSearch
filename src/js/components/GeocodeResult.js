@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const GeocodeResult = ({ address, location }) => (
-    <ul className="geocode-result">
-        <li>住所：{address}</li>
+const GeocodeResult = ({ address }) => (
+    <ul className="geocode--result">
+        <li className="geocode--result__address">住所：{address}</li>
     </ul>
 );
 

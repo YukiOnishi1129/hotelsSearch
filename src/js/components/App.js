@@ -12,14 +12,22 @@ import AboutPage from './AboutPage';
 const App = () => (
     <Router>
         <div className="app">
-            <ul className="left-navi">
-                <li><Link to="/">ホテル検索</Link></li>
-                <li><Link to="/about">About</Link></li>
-            </ul>
-            <Switch>
-                <Route exact path="/" component={SearchPage} />
-                <Route exact path="/about" component={AboutPage} />
-            </Switch>
+            <header className="header">
+                <div className="header__section">
+                    <h1 className="header__title">ホテル検索サービス</h1>
+                    <ul className="header__navi">
+                        <li><Link to="/" className="header__link">ホテル検索</Link></li>
+                        <li><Link to="/about" className="header__link">使い方</Link></li>
+                    </ul>
+                </div>
+            </header>
+            <div className="header--dummy"></div>
+            <main className="main">
+                <Switch>
+                    <Route exact path="/" component={SearchPage} />
+                    <Route exact path="/about" component={AboutPage} />
+                </Switch>
+            </main>
         </div>
     </Router>
     

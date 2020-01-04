@@ -26,8 +26,8 @@ export const searchHotelByLocation = location => {
                     url: basicInfo.hotelInformationUrl,
                     thumbUrl: basicInfo.hotelThumbnailUrl,
                     price: basicInfo.hotelMinCharge,
-                    reviewAverage: basicInfo.reviewAverage,
-                    reviewCount: basicInfo.reviewCount,
+                    reviewAverage: basicInfo.reviewAverage === null ? 0 : basicInfo.reviewAverage,
+                    reviewCount: basicInfo.reviewCount === null ? 0 : basicInfo.reviewCount,
                     distance,
                 }
                 hotels.push(data);

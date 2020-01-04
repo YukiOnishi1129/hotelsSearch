@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const HotelRow = ({ hotel }) => (
-   <tr>
-       <td><img src={hotel.thumbUrl} alt={hotel.name} /></td>
-       <td><a href={hotel.url} target="_blank">{hotel.name}</a></td>
-       <td>{hotel.price ? `${hotel.price}円` : '空室なし'}</td>
-       <td>{hotel.reviewAverage}</td>
-       <td>{hotel.reviewCount}</td>
-       <td>{hotel.distance}</td>
+   <tr className="table__tr">
+       <td className="table--image"><img src={hotel.thumbUrl} alt={hotel.name} /></td>
+       <td className="table--name"><a href={hotel.url} target="_blank">{hotel.name}</a></td>
+       <td className="hotel-price-column">{hotel.price ? `${hotel.price}円` : '空室なし'}</td>
+       <td className="hotel-price-column">{hotel.reviewAverage}</td>
+       <td className="hotel-price-column">{hotel.reviewCount ? `${hotel.reviewCount}件` : '0件' }</td>
+       <td className="hotel-price-column">{hotel.distance}m</td>
    </tr>
 );
 

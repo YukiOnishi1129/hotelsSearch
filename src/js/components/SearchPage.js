@@ -17,19 +17,16 @@ class SearchPage extends Component {
 
     render() {
         return (
-            <div className="search-page">
+            <div>
                 <h1 className="app--title">ホテル検索</h1>
                 <SearchForm history={this.props.history} />
-                 <div className="result-area">
-                    {/* <Map location={this.props.geocodeResult.location} /> */}
-                    <div className="result-right">
-                        <GeocodeResult 
-                            address={this.props.geocodeResult.address}
-                            location={this.props.geocodeResult.location}
-                        />
-                         <h2>ホテル検索結果</h2>
-                        <HotelsTable />
-                    </div>
+                <div>
+                    <GeocodeResult 
+                        address={this.props.geocodeResult.address}
+                        location={this.props.geocodeResult.location}
+                    />
+                        <h2 className="result--title">ホテル検索結果</h2>
+                    <HotelsTable />
                 </div>
             </div>
         );

@@ -13,7 +13,6 @@ export const geocode = place =>
                 if(typeof result === 'undefined') {
                     return { status };
                 }
-
                 const address = result.formatted_address;
                 const location = result.geometry.location;
                 return { status, address, location };

@@ -7,11 +7,11 @@ import HotelRow from './HotelRow';
 import HotelsClickableTh from './HotelsClickableTh';
 
 const HotelsTable = ({ hotels }) => (
-   <table>
+   <table className="table">
        <tbody>
         <tr>
-            <th>画像</th>
-            <th>ホテル名</th>
+            <th className="table--image">画像</th>
+            <th className="table--name">ホテル名</th>
             <HotelsClickableTh 
                 label='値段'
                 sortKey='price'
@@ -42,7 +42,13 @@ HotelsTable.defaultProps = {
     hoels: [],
 }
 
-const sortedHotels = (hotels, sortKey) => _.sortBy(hotels, h => h[sortKey]);
+const sortedHotels = (hotels, sortKey) => {
+    if(sortKey === 'reviewAverage' || sortKey === 'reviewCount') {
+        return _.sortBy(hotels, h => h[sortKey]).reverse();
+    } else {
+        return  _.sortBy(hotels, h => h[sortKey]);
+    }
+}
 
 export default connect(
     state => ({

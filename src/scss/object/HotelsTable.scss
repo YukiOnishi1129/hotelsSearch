@@ -1,7 +1,33 @@
 .hotel-price-column {
-    min-width: 70px;
+    width: 15% ;
+}
+
+.table {
+    width:100%;
+    margin: 0 auto;
+    @include sm {
+        font-size: 10px;
+    }
+    &--image {
+        width: 10% ;
+    }
+    &--name {
+        width: 30% ;
+    }
+    &__tr {
+        height: 100px;
+        @include sm {
+            height: 50px;
+        }
+    }
 }
 
 td {
-    padding: 4px;
+    text-align:center;
+    @include sm {
+        img {
+            width:100%;
+            display:block;
+        }
+    }
 }

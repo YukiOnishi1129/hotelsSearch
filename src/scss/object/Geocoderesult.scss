@@ -1,3 +1,15 @@
-.geocode-result {
-    text-align: left;
+.geocode {
+    &--result{
+        text-align: center;
+        list-style: none;
+        font-size: 20px;
+        padding-left:0;
+        @include sm {
+            width: 80%;
+            margin: 40px auto;
+        }
+        &__address{
+            margin-bottom:40px;
+        }
+    }
 }

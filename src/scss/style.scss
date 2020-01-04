@@ -1,14 +1,18 @@
 $background-color: #eee;
+$background_color_header:rgb(5,33,92);
 $text-color: #444;
 $base-margin: 40px;
+$search-form-font-size: 24px;
 
 body {
     background: $background-color;
     color: $text-color;
     margin: 0;
 }
+@import 'foundation/mixin';
 @import 'foundation/reset';
 @import 'layout/App';
+@import 'layout/header';
 @import 'object/SearchForm';
 @import 'object/GeocodeResult';
 @import 'object/HotelsTable';

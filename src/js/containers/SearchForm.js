@@ -6,7 +6,7 @@ import { setPlace, startSearch } from '../actions/';
 
 const  SearchForm = props => (
     <form
-        className="search-form" 
+        className="search--form" 
         onSubmit={(e) => {
             e.preventDefault();
             props.history.push(`/?place=${props.place}`)
@@ -14,16 +14,15 @@ const  SearchForm = props => (
         }}
     >
         <input 
-            className="place-input"
+            className="place--input"
             type="text" 
-            size="30"
             value={props.place} 
             onChange={(e) => {
                 e.preventDefault();
                 props.setPlace(e.target.value)
             }} 
         />
-        <input className="submit-button" type="submit" value="検索"/>
+        <input className="submit--button" type="submit" value="検索"/>
     </form>
 );
 
