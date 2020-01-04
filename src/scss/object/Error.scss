@@ -1,0 +1,13 @@
+.Error {
+    &__area {
+        width: 50%;
+        margin-top: 80px;
+        margin-right:auto;
+        margin-left:auto;
+        &__description {
+            text-align:center;
+            font-size: 30px;
+            font-weight: bold;;
+        }
+    }
+}

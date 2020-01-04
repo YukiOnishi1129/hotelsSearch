@@ -8,6 +8,7 @@ import {
 
 import SearchPage from './SearchPage';
 import AboutPage from './AboutPage';
+import Error from './Error';
 
 const App = () => (
     <Router>
@@ -26,6 +27,7 @@ const App = () => (
                 <Switch>
                     <Route exact path="/" component={SearchPage} />
                     <Route exact path="/about" component={AboutPage} />
+                    <Route path="/*" component={Error} />
                 </Switch>
             </main>
         </div>
