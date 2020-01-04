@@ -4,10 +4,16 @@
         margin-top: 80px;
         margin-right:auto;
         margin-left:auto;
+        @include sm {
+            width: 90%;
+        }
         &__description {
             text-align:center;
             font-size: 30px;
-            font-weight: bold;;
+            font-weight: bold;
+            @include sm {
+                font-size: 24px;
+            }
         }
     }
 }
