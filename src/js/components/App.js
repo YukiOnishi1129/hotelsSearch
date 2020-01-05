@@ -27,7 +27,7 @@ const App = () => (
                 <Switch>
                     <Route exact path="/" component={SearchPage} />
                     <Route exact path="/about" component={AboutPage} />
-                    <Route path="/*" component={Error} />
+                    <Route component={Error} />
                 </Switch>
             </main>
         </div>
