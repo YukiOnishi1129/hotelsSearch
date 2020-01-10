@@ -53,7 +53,7 @@
     "redux-thunk": "2.2.0",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
-    "webpack-dev-server": "2.5.1"
+    "webpack-dev-server": "3.1.11"
   },
   "browser": {
     "fs": false
